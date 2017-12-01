@@ -41,7 +41,7 @@ app.get('/daily', async (req, res) => {
     const now = moment().tz("Japan");
     const result = [];
     
-    for (let eq of JSON.parse(await fs.readFile('./pso2/dos.json', 'utf8'))) {
+    for (let eq of JSON.parse(await fs.readFile('./dos.json', 'utf8'))) {
         const name = eq[0];
         const startDate = moment(eq[1], '2017-11-30').subtract(1, 'day');
         const intervals = eq[2];
@@ -57,6 +57,10 @@ app.get('/daily', async (req, res) => {
     }
     
         res.send(result);
-    });    
+    });   
+    
+app.listen(5000, () => {
+        console.log("Listening on port 5000.");
+});    
 
-client.login('TOKEN');
+client.login('MzgzNTY0OTcyNjk0ODMxMTE0.DPmIug.LYzFjzO01-ogBHBBNtLOoDSOSlc');
