@@ -63,4 +63,4 @@ app.listen(5000, () => {
         console.log("Listening on port 5000.");
 });    
 
-client.login('MzgzNTY0OTcyNjk0ODMxMTE0.DPmIug.LYzFjzO01-ogBHBBNtLOoDSOSlc');
+client.login('TOKEN');
